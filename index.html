@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quantumOS</title>
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="icon" href="images/favicon.ico">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+    <script src="scripts.js"></script>
+    
+
+</head>
+
+<body onload="timeupdate()">
+    
+    <div id="crt">
+    </div>
+    <div class="window">
+        <div class="boot" id="boot">
+            <p>quantumOS
+                <br>
+               Copyright (C) 2021-2021. No Right Reserved
+               <br>
+               <br>
+               Version 0.42(beta)
+                <br>
+               Initialising Nostalgia.......(98% completed)
+               <br>
+               <br>
+               <br>
+               <br>
+               
+               <p class="loaded" id='loaded'>Press Any Key/Click to Continue.</p>
+            </div>
+        <div class="os" id="os">
+
+            <video autoplay muted loop playsinline id="bg_waves">
+                <source src="images/backvides.webm" type="video/webm" />
+            </video>
+
+                <div class="navbar">
+                    <div class="left">
+                        <div class="img">
+                        <div class="btn"></div>
+                            <ul class="drop">
+                                <li onclick="abouton()">About</li>
+                                <li onclick="openFullscreen()">Fullscreen</li>
+                                <li onclick="restart()">Restart</li>
+                            </ul>
+                        </div>                       
+                        <div class="file">
+                            <button class="btn">File</button>
+                            <ul class="drop">
+                                <li class="other">New</li>
+                                <li class="other">Open</li>
+                                <li class="show_hidden" id="show_hidden" onclick="f1()">Show hidden files</li>
+                            </ul>
+                        </div>
+                        <div class="edit">
+                            <button class="btn">Edit</button>
+                            <ul class="drop">
+                                <li>Undo</li>
+                                <li>Cut</li>
+                                <li>Copy</li>
+                                <li>Paste</li>
+                            </ul>
+                        </div> 
+                        <div class="link">
+                            <button class="btn">Links</button>
+                            <ul class="drop">
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCI3M1chDMMZmOJe4DB2mzbA" target="_blank" >Youtube</a>
+                                </li>
+                            </ul>
+                        </div> 
+                    </div>
+                <div class="date_time" id="dateandtime"title="yep completely synced">
+                    Time
+                </div>
+            </div>
+            
+            
+            <button class="folder" id="youtube" onclick="buttonon(this.id)">
+                <img draggable="false" src="images/youtube.png" alt="" class="icon">
+                <span >Youtube.exe</span>
+            </button>
+            <button class="folder" id="achieve" onclick="buttonon(this.id)">
+                <img draggable="false" src="images/achieve.png" alt="" class="icon">
+                <span >Achievements</span>
+            </button>
+            <button class="folder" id="readme" onclick="buttonon(this.id)">
+                <img draggable="false" src="images/notepad.png" alt="" class="icon">
+                <span>Readme.txt</span>
+            </button> 
+            <button class="folder" id="homework" onclick="homework()">
+                <img draggable="false" src="images/homework.png" alt="" class="icon">
+                <span >homework</span>
+            </button> 
+            <button class="folder" id="game" onclick="buttonon(this.id)">
+                <img draggable="false" src="images/ronacons.png" alt="" class="icon">
+                <span>Corona.exe</span>
+            </button> 
+
+            <div class="modal" id="about">
+                <div class="header" id="draggable">
+                    <div class="closewrap">
+                        <button class="close" id="about" onclick="buttonoff(this.id)"></button>
+                    </div>                   
+                    <span>About_QuantumOS.txt</span>                   
+                </div>
+                <div class="cont">
+                    <div class="aboutheading">
+                        <span>TECHNICAL STUFF</span>
+                </div>
+                    <img src="images/aboutdev.png" alt="" class="wrapabout">
+                    <p class="content">
+                        This website is made with HTML, CSS and vanilla Javascript. It is themed after old operating softwares and old monitors. This is achieved by using linear gradients for making pixels and a flicker effect. The text-shadow element helps in bringing a text flickering. The screen seen in the beginning is inspired by boot screens of old OS. The boot screen is actually a loader so that the website is able to load all the icons and the main font.
+                        <br>
+                        <br>
+                        Many elements have been used to compile a responsive website. The website is completely compatible and functional with all display sizes. It has been tested at a min width of 325px and a max of a 4k tv.
+                    </p>
+                </div>
+            </div>   
+            <div class="modal" id="readmemod" style="visibility: visible;">
+                <div class="header" id="draggable">
+                    <div class="closewrap">
+                        <button class="close" id="readmemod" onclick="buttonoff(this.id)"></button>
+                    </div>                   
+                    <span>Read_me.txt</span>                   
+                </div>
+                <div class="cont" id="aboutmecont" style="height: 50vh;">
+                    <div class="content" id="aboutmecontent" style="padding-top: 0px;">
+                        <img src="images/pic.jpeg" alt="" style="width: 10em;height:14em;border: 3px solid black;float: left; margin-right: 10px;filter: grayscale(100%);">
+
+                       <p style="margin: 0px;filter: grayscale(100%);"><span>HI</span> 👋
+                        <br>   
+                        <br>
+                        <span>I'm Akshat Singh !</span> a 17 year old VR enthusiast. I absolutely love making <span>front-end-designs</span> and tackling new challenges with every new project I make.
+                        <br>
+                        <br>
+                        I aspire to be a content creator and in order to realise that dream I have already started taking steps in the right direction. I successfully conquered the Youtube algorithm and hit the <span>million views</span> mark in December 2020 </p>     
+                        
+                        <hr style="height: 2px; background-color:black ; width: 100%;margin-top: 20px;margin-bottom: 20px;">  
+                            <h1 style="line-height: normal;background: rgb(196, 196,196);text-align: center;margin:0px;">
+                                HELPING YOUR BUSINNESS GROW
+                            </h1>  
+                            <p style="text-align: center;margin-top: 0px;">I will help you digitise your business and increase reach</p>
+                             
+                            <div class="services">
+
+                                <div class="servi" style="background-image: url(images/seo.png);background-repeat: no-repeat;background-size: 100% 100%;"><span>SEO</span></div>
+
+                                <div class="servi" style="background-image: url(images/logo_design.png);background-repeat: no-repeat;background-size: 100% 100%;"><span>LOGO DESIGN</span></div>
+
+                                <div class="servi" style="background-image: url(images/social.png);background-repeat: no-repeat;background-size: 100% 100%;"><span>SOCIAL MEDIA</span></div>
+
+                                <div class="servi" style="background-image: url(images/logo_yt.png);background-repeat: no-repeat;background-size: 100% 100%;"><span>ADVERTISING</span></div>
+                            </div>
+                        <hr style="height: 2px; background-color:black ; width: 100%;margin-top: 20px;margin-bottom: 20px;">  
+                            <h1 style="line-height: normal;background: rgb(196, 196,196);text-align: center;margin:0px;">
+                            
+                                <h1 style="line-height: normal;background: rgb(196, 196,196);text-align: center;margin:0px;">
+                                    LET'S CONNECT !
+                                </h1> 
+
+                                <p style="text-align: center;margin-top: 0px;">make your ideas a reality</p>
+                                
+                                <h1 style="line-height: normal;background: rgb(196, 196,196);text-align: center;margin:0px; border: 3px solid black;font-size: 20px;">
+                                    ak.s.hatoff@gmail.com
+                                </h1> 
+
+
+                   </div>
+                </div>
+            </div>
+            <div class="modal" id="youtubemod">
+                <div class="header" id="draggable">
+                    <div class="closewrap">
+                        <button class="close" id="youtubemod" onclick="buttonoff(this.id)"></button>
+                    </div>                   
+                    <span>Youtube</span>                   
+                </div>
+                <div class="cont" id="youtubecont" style="height: 50vh; ">
+                    <div class="content" id="youtubecont">
+                        <h1 style="line-height: normal;background: rgb(196, 196,196);text-align: center;margin:0px;">
+                            Hacking SEO
+                        </h1>  
+                        <hr style="height: 3px;background-color: black;">
+                        <img src="afterdie.jpg" alt="" style="border-radius: 100px; border: 3px solid black;float:right;filter: grayscale(100%);">
+                        <p>I love animating and drawing and so thought of starting a YouTube. I had tried twice and had failed but this time I knew the mysterious ways of the algorithm. I started back in <span>December 2020</span> and this time I made it and got monetized instantly. I have taken a temporary break from <span>YouTube</span> due to ongoing exams but plan to start uploading again once I have better content</p> 
+
+                        <div style="display: flex;background-color: black;">
+                            <span style="margin: auto;background-color: rgb(196, 196,196);padding: 3px;">
+                            <a href="https://www.youtube.com/channel/UCI3M1chDMMZmOJe4DB2mzbA" target="_blank">Find me Here</a>
+                            </span>
+                        </div>
+                        
+                   </div>
+                </div>
+            </div> 
+            <div class="modal" id="achievemod">
+                <div class="header" id="draggable">
+                    <div class="closewrap">
+                        <button class="close" id="achievemod" onclick="buttonoff(this.id)"></button>
+                    </div>                   
+                    <span>Achievements.txt</span>                   
+                </div>
+                <div class="cont" id="achievecont" style="height: 50vh; ">
+                    <div class="content" id="achievecont">  
+                        <div class="row">
+                            <div class="column">
+                                <a href="images/cert/cert1.jpg" target="_blank">
+                                    <img src="images/cert/cert1.jpg" alt="Forest" style="width:100%">
+                                </a>
+                            </div>
+                            <div class="column">
+                                <a href="images/cert/cert2.jpg" target="_blank">
+                                    <img src="images/cert/cert2.jpg" alt="Forest" style="width:100%">
+                                </a>
+                              
+                            </div>
+                            <div class="column">
+                                <a href="images/cert/cert3.jpg" target="_blank">
+                                    <img src="images/cert/cert3.jpg" alt="Forest" style="width:100%">
+                                </a>
+                            </div>
+                            <div class="column">
+                                <a href="images/cert/cert4.jpg" target="_blank">
+                                    <img src="images/cert/cert4.jpg" alt="Forest" style="width:100%">
+                                </a>
+                            </div>
+                            <div class="column">
+                                <a href="images/cert/cert5.jpg" target="_blank">
+                                    <img src="images/cert/cert5.jpg" alt="Forest" style="width:100%">
+                                </a>
+                            </div>
+                          </div>                        
+                   </div>
+                </div>
+            </div>
+
+            <div class="homeworkmodal" id="homeworkmod">
+                <div class="cont">
+                    <span>File is corrupted !</span>
+                </div>
+            </div> 
+
+        </div>
+
+        <div class="modal" id="gamemod">
+            <div class="header" id="draggable">
+                <div class="closewrap">
+                    <button class="close" id="gamemod" onclick="buttonoff(this.id)"></button>
+                </div>                   
+                <span>Corona.exe</span>                   
+            </div>
+            <div class="cont" id="gamecont" style="height: 41.5vh; padding: 0px">
+                <div class="content" id="gamecont" style="padding: 0px;">
+                    <iframe id="coronagame" src="https://that-corona-game.netlify.app/" style="height:40vh;width: 25vh;padding: 0px;" ></iframe>          
+               </div>
+            </div>
+        </div>
+    </div> 
+
+</body>
+
+</html>
